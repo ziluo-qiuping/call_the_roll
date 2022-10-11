@@ -1,5 +1,5 @@
 0,true
-1,true
+1,false
 2,true
 3,true
 4,true
@@ -7,9 +7,9 @@
 6,true
 7,true
 8,true
-9,false
-10,false
-11,true
+9,true
+10,true
+11,false
 12,true
 13,true
 14,true
@@ -29,7 +29,7 @@
 28,true
 29,true
 30,true
-31,true
+31,false
 32,true
 33,true
 34,true
@@ -37,17 +37,17 @@
 36,true
 37,true
 38,true
-39,false
+39,true
 40,true
 41,true
-42,false
-43,true
+42,true
+43,false
 44,true
 45,true
 46,true
 47,true
 48,true
-49,false
+49,true
 50,true
 51,true
 52,true
@@ -60,7 +60,7 @@
 59,true
 60,true
 61,true
-62,false
+62,true
 63,true
 64,true
 65,true
@@ -74,7 +74,7 @@
 73,true
 74,true
 75,true
-76,false
+76,true
 77,true
 78,true
 79,true
@@ -86,5 +86,5 @@
 85,true
 86,true
 87,true
-88,true
+88,false
 89,true
