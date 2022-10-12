@@ -1,10 +1,10 @@
 package modles
 
 import (
+	"algorithm/utils"
 	"encoding/csv"
 	"fmt"
 	"os"
-	"algorithm/utils"
 	"sort"
 	"strconv"
 )
@@ -91,7 +91,7 @@ func (c *course) inputRollbook() (rollbook []record) {
 //进行一次算法
 func (c *course) algorithm() {
 	rb := c.inputRollbook() //读入一次课程记录
-	if c.count < 2 {        //前三次全读取
+	if c.count < 1 {        //前一次全读取
 		for _, v := range rb {
 			if v.isPresent == false { //没到
 				c.class[v.id].absentCount++
@@ -113,7 +113,7 @@ func (c *course) algorithm() {
 //第一次之后 先找出缺课最多的前n个学生 在随机找m-n个学生
 func (c *course) findAbsent(rb []record, n int, m int) {
 	ids := findAbsentMax(c.class, n)
-	c.output(1, ids, rb)
+	c.output(0, ids, rb)
 	for _, id := range ids {
 		if rb[id].isPresent == false {
 			c.class[id].absentCount++
@@ -180,9 +180,9 @@ func (cg courseGroup) Exec() {
 func (c *course) exec() {
 	for i := 1; i <= 20; i++ {
 		c.algorithm()
-		if i%5 == 0 || i == 1 {
+		
 			fmt.Printf("course: %s count: %d sum: %d valid: %d E: %f \n", c.name, c.count, c.sum, c.valid, float64(c.valid)/float64(c.sum))
-		}
+		
 	}
 }
 
