@@ -1,3 +1,3 @@
-module project/call_the_roll/algorithm
+module algorithm
 
 go 1.17

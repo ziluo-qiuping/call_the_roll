@@ -4,7 +4,7 @@ import (
 	"encoding/csv"
 	"fmt"
 	"os"
-	"project/call_the_roll/algorithm/utils"
+	"algorithm/utils"
 	"sort"
 	"strconv"
 )

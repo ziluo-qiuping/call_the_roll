@@ -1,3 +1,3 @@
-module project/call_the_roll/rollbook
+module rollbook
 
 go 1.17

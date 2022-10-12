@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"project/call_the_roll/rollbook/modles"
+	"rollbook/modles"
 )
 
 func main() {

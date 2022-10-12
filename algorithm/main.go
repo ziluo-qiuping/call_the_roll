@@ -1,7 +1,7 @@
 package main
 
 import (
-	"project/call_the_roll/algorithm/modles"
+	"algorithm/modles"
 )
 
 func main() {
