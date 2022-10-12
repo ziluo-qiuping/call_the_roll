@@ -91,7 +91,7 @@ func (c *course) inputRollbook() (rollbook []record) {
 //进行一次算法
 func (c *course) algorithm() {
 	rb := c.inputRollbook() //读入一次课程记录
-	if c.count < 1 {        //前一次全读取
+	if c.count < 1 {        //第一次全读取 
 		for _, v := range rb {
 			if v.isPresent == false { //没到
 				c.class[v.id].absentCount++
@@ -103,7 +103,7 @@ func (c *course) algorithm() {
 		}
 		c.output(0, []int{}, rb)
 		c.sum += 90
-	} else { //第三次之后 先找出缺课最多的前n个学生 在随机找M-n个学生
+	} else { //第一次之后 先找出缺课最多的前n个学生 在随机找M-n个学生  目前M设置为10，放弃了随机查找学生
 		n := 10 //n课根据上课次数修改
 		c.findAbsent(rb, n, M)
 	}
